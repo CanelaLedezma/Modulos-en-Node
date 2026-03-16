@@ -1,0 +1,21 @@
+{
+  "name": "tp-3-modulos-en-node--ledezma-andracca",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/CanelaLedezma/Modulos-en-Node#readme",
+  "bugs": {
+    "url": "https://github.com/CanelaLedezma/Modulos-en-Node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CanelaLedezma/Modulos-en-Node.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  }
+}
