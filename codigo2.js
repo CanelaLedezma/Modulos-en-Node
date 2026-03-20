@@ -20,3 +20,14 @@ buscarProducto("Mouse");
 
 //--------EJ06-----------------//
 
+
+
+
+const archivoCSV = () =>{
+    let csvContent = "nombre;precio\n";
+    productos.forEach(p => {
+    csvContent += `${p.nombre};${p.precio}\n`
+    })
+    fs.writeFileSync("productos.csv", csvContent, "utf8");
+ }
+archivoCSV();
