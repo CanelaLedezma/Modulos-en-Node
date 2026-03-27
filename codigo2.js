@@ -91,3 +91,23 @@ const analizarTexto =  texto => {
 }
 
 analizarTexto("hola mundo chau mundo");
+
+//--------EJ09-----------------//
+const numeros = [0,1,2,3,4,5,6,7,8,9]
+const validarContraseña = contraseña =>{
+    contraseñaSeparada = [...contraseña];
+    numero = false;
+    mayuscula = false;
+    contraseñaSeparada.forEach(e =>{
+        if(e === e.toUpperCase())
+        {
+            matuscula = true;
+        }
+        numeros.forEach(u=>{
+            if(e === u){
+                numeros = true;
+            }
+        })
+
+    })
+}
