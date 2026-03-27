@@ -1,6 +1,8 @@
 //EJ1
 import fs from 'fs';
 import dayjs from 'dayjs';
+import axios from 'axios'
+
     console.log(`EJ01`);
     console.log(`  `);
 
@@ -48,14 +50,12 @@ function mostrarFechaHora() {
 mostrarFechaHora();
 
 //--------EJ04-----------------//
-import axios from 'axios'
+
 
 async function obtenerPais(nombrePais) {
     try {
         const response = await axios.get(`https://restcountries.com/v3.1/name/${nombrePais}`)
-
         const data = response.data
-
         const pais = data[0]
 
         console.log("País:", pais.name.common);
@@ -68,3 +68,5 @@ async function obtenerPais(nombrePais) {
 }
 
 obtenerPais("Argentina")
+
+
