@@ -31,3 +31,63 @@ const archivoCSV = () =>{
     fs.writeFileSync("productos.csv", csvContent, "utf8");
  }
 archivoCSV();
+
+
+//--------EJ07-----------------//
+
+const contar10 = () =>{
+let i = 0;
+const id = setInterval(() => {
+i++
+console.log(i)
+}, 1000);
+setTimeout(() =>{
+    console.log("contador terminado");
+    clearInterval(id);
+},10500)
+}
+contar10();
+
+//--------EJ08-----------------//
+
+const vocales = ["a","e","i" ,"o","u"];
+
+const analizarTexto =  texto => {
+    const textoSeparado = [...texto];
+    let textoAnalizado ={
+        vocales: 0,
+        consonantes: 0,
+        palabras: 1
+    }
+    let letraAnterior = false;
+    textoSeparado.forEach(e =>{
+        let vocal = false;
+        vocales.forEach(u =>{
+            if(e === u)
+            {
+                textoAnalizado.vocales ++;
+                vocal = true;
+            }
+        })
+        if(!vocal){
+            if(letraAnterior != false){
+                if(e === " "){
+                    textoAnalizado.palabras ++;
+                }
+                else{
+                        textoAnalizado.consonantes ++;
+                }
+                }
+                else{
+                    if(e != " "){
+                    textoAnalizado.consonantes ++;
+                    }
+            }
+        }
+        letraAnterior = e;
+    })
+    console.log(textoAnalizado)
+    
+}
+
+analizarTexto("hola mundo chau mundo");
